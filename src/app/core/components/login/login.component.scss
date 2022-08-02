@@ -1,0 +1,32 @@
+@import '../../../../styles.scss';
+header
+{
+  height:100vh;
+  background-color:$mainBackColr;
+
+  p{
+    color:$mainFontColr;
+    font-weight: bold;
+  }
+
+  mat-icon{
+    vertical-align: middle;
+    color: white;
+    margin-right: 2px;
+  }
+
+  input::placeholder
+  {
+    color:$mainFontColr;
+  }
+  .form-control:focus{
+    border-color: transparent;
+   box-shadow: 0 0 0 0.2rem rgba(173, 175, 181, 0.25);
+  }
+}
+
+
+
+
+
+//218438

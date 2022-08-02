@@ -1,0 +1,58 @@
+<header class="d-flex justify-content-center align-items-center text-white">
+  <div class="content text-center w-25">
+    <p><mat-icon>shopping_cart</mat-icon>e<span class="s">S</span>hop.com</p>
+    <form [formGroup]="loginForm" action="" (submit)="login()">
+      <input
+        type="text"
+        formControlName="userName"
+        placeholder="User Name"
+        class="form-control w-75 m-auto"
+        [class.is-valid]="
+          loginForm.controls['userName'].valid &&
+          loginForm.controls['userName'].dirty
+        "
+        [style.borderColor]="loginForm.controls['userName'].valid?'#06ec3c':'transparent'"
+        [style.boxShadow]="loginForm.controls['userName'].valid?'0 0 0 0.2rem #2a743c':'0 0 0.2rem rgba(173, 175, 181, 0.25)'"
+
+
+        [style.borderColor]="loginForm.controls['userName'].invalid &&
+        loginForm.controls['userName'].touched &&
+        loginForm.controls['userName'].dirty?'#d93429':'transparent'"
+
+
+
+      />
+      <div
+        *ngIf="
+          loginForm.controls['userName'].invalid &&
+          loginForm.controls['userName'].touched &&
+          loginForm.controls['userName'].dirty
+        "
+      >
+        <div
+          *ngIf="loginForm.controls['userName'].errors?.['required']"
+          class="text-danger mt-3"
+        >
+           <mat-icon class="text-danger">error</mat-icon>
+             UserName is required
+        </div>
+        <div
+        *ngIf="loginForm.controls['userName'].errors?.['pattern']"
+        class="text-danger mt-3"
+      >
+         <mat-icon class="text-danger">error</mat-icon>
+           UserName must't contain special characters or spaces
+      </div>
+      </div>
+      <button
+        type="submit"
+        [disabled]="loginForm.invalid"
+        class="mt-4"
+        mat-raised-button
+        color="primary"
+      >
+        Login
+      </button>
+    </form>
+  </div>
+</header>

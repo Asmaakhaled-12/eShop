@@ -1,0 +1,25 @@
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-6">
+      <img [src]="product.image" alt="" class="img-fluid  rounded">
+    </div>
+    <div class="col-md-6 d-flex align-items-center justify-content">
+      <div class="">
+        <h2>{{product.title}}</h2>
+        <p>{{product.description}}</p>
+        <h3>{{product.price | currency}}</h3>
+        <button
+        type="submit"
+        class="mt-4 float-right bg-info add-to-cart mt-5 w-25"
+        mat-raised-button
+        color="primary"
+        (click)="addItemToBasket(product)"
+      >
+        Add To Cart
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</div>

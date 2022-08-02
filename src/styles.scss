@@ -1,0 +1,20 @@
+
+
+
+
+///Colors Varaibles
+
+$mainBackColr:#323232;
+$mainFontColr:#a4a4a4;
+$secondBackColr:#e91e63;
+$navColr:#d3cece;
+
+
+html, body { height: 100%;background-color: $mainBackColr; color: $mainFontColr;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: $navColr }
+
+.s{
+  font-size: 20px;
+}
+
+

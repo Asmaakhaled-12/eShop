@@ -1,0 +1,58 @@
+@import '../../../../styles.scss';
+
+nav{
+  width:95%;
+}
+
+.navbar-brand{
+  .fa-cart-shopping{
+    margin-right: 20px;
+    position: relative;
+    font-size: 30px;
+  }
+
+
+  .number-of-items{
+    position: absolute;
+    top:60%;
+    left:60%;
+    background-color: $secondBackColr;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 10px;
+  }
+
+}
+
+
+.dropdown{
+
+  .userName{
+    color: $navColr;
+    }
+
+    .fa-user{
+      background-color: $navColr;
+      border-radius: 50%;
+      padding: 15px 20px;
+      font-size: 20px;
+      color:$secondBackColr;
+    }
+
+    .dropdown-menu{
+      top:100%;
+      right:100%;
+    }
+
+}
+
+@media screen and (max-width:1000px){
+.navbar-collapse{
+  margin-top: 20px;
+}
+}
+
+
+
+
+

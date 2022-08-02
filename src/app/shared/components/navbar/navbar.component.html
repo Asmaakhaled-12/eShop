@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark  m-auto ">
+  <a routerLink="/products/basket" class="navbar-brand" href="#">
+    <i class="fa-solid fa-cart-shopping">
+      <span *ngIf="(basket$|async) as basket" class="number-of-items">{{basket.items.length}}</span>
+    </i>
+    <span>e.<span class="s">S</span>hop.com</span>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto position-relative ">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          <span class="fa-solid fa-user mr-2" aria-hidden="true"></span>
+          <span class="mr-3 userName">{{userName}}</span>
+        </a>
+        <div class="dropdown-menu position-absolute">
+          <a class="dropdown-item" routerLink="/products/productList">Home</a>
+          <a class="dropdown-item" routerLink="/products/filiter">Fillter</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/login" (click)="removeFilteration()">Logout</a>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+
